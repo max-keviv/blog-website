@@ -1,0 +1,20 @@
+<% include partial/header.ejs %>
+<h1>Compose</h1>
+<p>
+<%- data.title -%>
+</p>
+<p>
+    <%- data.post -%>
+ </p>
+<form method="POST">
+<div class="form-group">
+<label>Title</label>
+<textarea class="form-control" rows="1" type="text" name="title"></textarea>
+<label>Post</label>
+<textarea class="form-control" rows="6" type="text" name="post"></textarea>
+<br>
+<button class="btn btn-primary "  type="submit" name="btn">publish</button>
+</div>
+</form>
+
+<% include partial/footer.ejs %>

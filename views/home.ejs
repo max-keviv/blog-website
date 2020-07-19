@@ -1,0 +1,17 @@
+
+<% include partial/header.ejs %>
+
+<h1>Home</h1>
+<p>
+<%= content %>
+
+<% data.forEach(function(post){%>
+    <h2><%- post.title -%>  </h2>
+   
+ <%- (post.post.length > 100)?( post.post.substr(0,99) +' &hellip;' ) :(post.post) -%>
+ <a href="/post/<%=post.title%> ">Read More</a>
+    
+    <!-- <p><%- post.post -%>  </p> -->
+<% });%>
+
+<% include partial/footer.ejs %>
